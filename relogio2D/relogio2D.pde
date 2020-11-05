@@ -99,7 +99,7 @@ void draw() {
   } else {
     stroke(0);  
   }
-  theta = TWO_PI * ((hour() % 12) + minute() / 60.0) / 12.0;
+  theta = TWO_PI * ((hour()-1 % 12) + minute() / 60.0) / 12.0;
   pontoFinal = converteTranslada(theta, comprimentoHoras);
   line(centro, centro, pontoFinal.x, pontoFinal.y);
   
